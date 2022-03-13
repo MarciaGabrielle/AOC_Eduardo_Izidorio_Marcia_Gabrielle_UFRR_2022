@@ -1,0 +1,20 @@
+|somador_pc
+clock => ~NO_FANOUT~
+in_port[0] => Add0.IN16
+in_port[1] => Add0.IN15
+in_port[2] => Add0.IN14
+in_port[3] => Add0.IN13
+in_port[4] => Add0.IN12
+in_port[5] => Add0.IN11
+in_port[6] => Add0.IN10
+in_port[7] => Add0.IN9
+out_port[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out_port[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out_port[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out_port[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out_port[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out_port[5] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out_port[6] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out_port[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+

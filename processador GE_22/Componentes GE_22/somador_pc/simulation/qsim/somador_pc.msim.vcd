@@ -1,0 +1,277 @@
+$comment
+	File created using the following command:
+		vcd file somador_pc.msim.vcd -direction
+$end
+$date
+	Tue Mar 08 10:51:43 2022
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module somador_pc_vhd_vec_tst $end
+$var wire 1 ! clock $end
+$var wire 1 " in_port [7] $end
+$var wire 1 # in_port [6] $end
+$var wire 1 $ in_port [5] $end
+$var wire 1 % in_port [4] $end
+$var wire 1 & in_port [3] $end
+$var wire 1 ' in_port [2] $end
+$var wire 1 ( in_port [1] $end
+$var wire 1 ) in_port [0] $end
+$var wire 1 * out_port [7] $end
+$var wire 1 + out_port [6] $end
+$var wire 1 , out_port [5] $end
+$var wire 1 - out_port [4] $end
+$var wire 1 . out_port [3] $end
+$var wire 1 / out_port [2] $end
+$var wire 1 0 out_port [1] $end
+$var wire 1 1 out_port [0] $end
+
+$scope module i1 $end
+$var wire 1 2 gnd $end
+$var wire 1 3 vcc $end
+$var wire 1 4 unknown $end
+$var wire 1 5 devoe $end
+$var wire 1 6 devclrn $end
+$var wire 1 7 devpor $end
+$var wire 1 8 ww_devoe $end
+$var wire 1 9 ww_devclrn $end
+$var wire 1 : ww_devpor $end
+$var wire 1 ; ww_clock $end
+$var wire 1 < ww_in_port [7] $end
+$var wire 1 = ww_in_port [6] $end
+$var wire 1 > ww_in_port [5] $end
+$var wire 1 ? ww_in_port [4] $end
+$var wire 1 @ ww_in_port [3] $end
+$var wire 1 A ww_in_port [2] $end
+$var wire 1 B ww_in_port [1] $end
+$var wire 1 C ww_in_port [0] $end
+$var wire 1 D ww_out_port [7] $end
+$var wire 1 E ww_out_port [6] $end
+$var wire 1 F ww_out_port [5] $end
+$var wire 1 G ww_out_port [4] $end
+$var wire 1 H ww_out_port [3] $end
+$var wire 1 I ww_out_port [2] $end
+$var wire 1 J ww_out_port [1] $end
+$var wire 1 K ww_out_port [0] $end
+$var wire 1 L \clock~input_o\ $end
+$var wire 1 M \out_port[0]~output_o\ $end
+$var wire 1 N \out_port[1]~output_o\ $end
+$var wire 1 O \out_port[2]~output_o\ $end
+$var wire 1 P \out_port[3]~output_o\ $end
+$var wire 1 Q \out_port[4]~output_o\ $end
+$var wire 1 R \out_port[5]~output_o\ $end
+$var wire 1 S \out_port[6]~output_o\ $end
+$var wire 1 T \out_port[7]~output_o\ $end
+$var wire 1 U \in_port[0]~input_o\ $end
+$var wire 1 V \in_port[1]~input_o\ $end
+$var wire 1 W \Add0~0_combout\ $end
+$var wire 1 X \in_port[2]~input_o\ $end
+$var wire 1 Y \Add0~1\ $end
+$var wire 1 Z \Add0~2_combout\ $end
+$var wire 1 [ \in_port[3]~input_o\ $end
+$var wire 1 \ \Add0~3\ $end
+$var wire 1 ] \Add0~4_combout\ $end
+$var wire 1 ^ \in_port[4]~input_o\ $end
+$var wire 1 _ \Add0~5\ $end
+$var wire 1 ` \Add0~6_combout\ $end
+$var wire 1 a \in_port[5]~input_o\ $end
+$var wire 1 b \Add0~7\ $end
+$var wire 1 c \Add0~8_combout\ $end
+$var wire 1 d \in_port[6]~input_o\ $end
+$var wire 1 e \Add0~9\ $end
+$var wire 1 f \Add0~10_combout\ $end
+$var wire 1 g \in_port[7]~input_o\ $end
+$var wire 1 h \Add0~11\ $end
+$var wire 1 i \Add0~12_combout\ $end
+$var wire 1 j \ALT_INV_in_port[0]~input_o\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+02
+13
+x4
+15
+16
+17
+18
+19
+1:
+0;
+0L
+1M
+0N
+0O
+0P
+0Q
+0R
+0S
+0T
+0U
+0V
+0W
+0X
+0Y
+0Z
+0[
+1\
+0]
+0^
+0_
+0`
+0a
+1b
+0c
+0d
+0e
+0f
+0g
+1h
+0i
+1j
+0"
+0#
+0$
+0%
+0&
+0'
+0(
+0)
+0<
+0=
+0>
+0?
+0@
+0A
+0B
+0C
+0D
+0E
+0F
+0G
+0H
+0I
+0J
+1K
+0*
+0+
+0,
+0-
+0.
+0/
+00
+11
+$end
+#100000
+1!
+1;
+1L
+#200000
+0!
+1)
+0;
+1C
+1U
+0L
+0j
+1W
+0M
+1N
+0K
+1J
+01
+10
+#300000
+1!
+1;
+1L
+#400000
+0!
+0)
+1(
+0;
+0C
+1B
+1V
+0U
+0L
+1j
+1M
+1K
+11
+#500000
+1!
+1;
+1L
+#600000
+0!
+1)
+0;
+1C
+1U
+0L
+0j
+0W
+1Y
+0M
+0N
+1Z
+0K
+0J
+01
+1O
+00
+1I
+1/
+#700000
+1!
+1;
+1L
+#800000
+0!
+0)
+0(
+1'
+0;
+0C
+0B
+1A
+1X
+0V
+0U
+0L
+1j
+0Y
+0Z
+0\
+1M
+0O
+1]
+1Z
+1\
+1K
+0I
+11
+1O
+1P
+0]
+0/
+1I
+1H
+0P
+1/
+1.
+0H
+0.
+#900000
+1!
+1;
+1L
+#1000000

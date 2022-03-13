@@ -1,0 +1,96 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Componentes/somador_pc/simulation/qsim
+Esomador_pc
+Z1 w1646747501
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 7d5Xo;QBOkc31OfQTzSXV0
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z7 DPx11 fiftyfivenm 22 fiftyfivenm_components 0 22 IfY7Mh2WPBc;@7U@3<I^[0
+R0
+Z8 8somador_pc.vho
+Z9 Fsomador_pc.vho
+l0
+L34
+Vl]:mC^CE?fQbMQ:R;Kc[21
+!s100 DM0iX<=3HiV:<;Yc:Dc]m1
+Z10 OV;C;10.5b;63
+32
+Z11 !s110 1646747502
+!i10b 1
+Z12 !s108 1646747502.000000
+Z13 !s90 -work|work|somador_pc.vho|
+Z14 !s107 somador_pc.vho|
+!i113 1
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 10 somador_pc 0 22 l]:mC^CE?fQbMQ:R;Kc[21
+l87
+L42
+V_2XMYQaa@0KEJkm^4Dk3R3
+!s100 MalfncM_R_@ENDCf^Pnkz3
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Esomador_pc_vhd_vec_tst
+Z17 w1646747499
+R5
+R6
+R0
+Z18 8Waveform.vwf.vht
+Z19 FWaveform.vwf.vht
+l0
+L31
+Viz47<Ff]1SoOdS:6KWiEc0
+!s100 Oc`6z6AciF7gB1gXaLdMF2
+R10
+32
+R11
+!i10b 1
+R12
+Z20 !s90 -work|work|Waveform.vwf.vht|
+Z21 !s107 Waveform.vwf.vht|
+!i113 1
+R15
+R16
+Asomador_pc_arch
+R5
+R6
+DEx4 work 22 somador_pc_vhd_vec_tst 0 22 iz47<Ff]1SoOdS:6KWiEc0
+l46
+L33
+VZiPbfaHzQHa0a_RK<O28R1
+!s100 _X[lgMKC0>02`VNQIDgIS1
+R10
+32
+R11
+!i10b 1
+R12
+R20
+R21
+!i113 1
+R15
+R16
