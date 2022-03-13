@@ -1,0 +1,6 @@
+|portAnd
+in_port_A => out_port.IN0
+in_port_B => out_port.IN1
+out_port << out_port.DB_MAX_OUTPUT_PORT_TYPE
+
+

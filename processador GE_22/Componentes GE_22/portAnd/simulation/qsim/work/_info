@@ -1,0 +1,96 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Componentes/portAnd/simulation/qsim
+Eportand
+Z1 w1646743987
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 7d5Xo;QBOkc31OfQTzSXV0
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z7 DPx11 fiftyfivenm 22 fiftyfivenm_components 0 22 IfY7Mh2WPBc;@7U@3<I^[0
+R0
+Z8 8portAnd.vho
+Z9 FportAnd.vho
+l0
+L34
+Vhbdo]2_fJic@E]A@hl<a<3
+!s100 DPW8gY2VA360c3BJ>1B?T2
+Z10 OV;C;10.5b;63
+32
+Z11 !s110 1646743992
+!i10b 1
+Z12 !s108 1646743992.000000
+Z13 !s90 -work|work|portAnd.vho|
+Z14 !s107 portAnd.vho|
+!i113 1
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 7 portand 0 22 hbdo]2_fJic@E]A@hl<a<3
+l60
+L42
+V[dGVEk11HFRKj9zB3zEKd2
+!s100 G:W?]L:3MAKB2FQCAK0mX2
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Eportand_vhd_vec_tst
+Z17 w1646743986
+R5
+R6
+R0
+Z18 8Waveform.vwf.vht
+Z19 FWaveform.vwf.vht
+l0
+L31
+VD6[:J;STZX:O@>g8jH9G80
+!s100 BBC:MSQ:l@_e[<i7AMzN`2
+R10
+32
+R11
+!i10b 1
+R12
+Z20 !s90 -work|work|Waveform.vwf.vht|
+Z21 !s107 Waveform.vwf.vht|
+!i113 1
+R15
+R16
+Aportand_arch
+R5
+R6
+DEx4 work 19 portand_vhd_vec_tst 0 22 D6[:J;STZX:O@>g8jH9G80
+l46
+L33
+V4Z;`G966MU7J9Qn8Sa:H53
+!s100 NX<`ESz7ejDZ_bjKb@BfU1
+R10
+32
+R11
+!i10b 1
+R12
+R20
+R21
+!i113 1
+R15
+R16
