@@ -1,0 +1,1438 @@
+|processador_GE_22
+clock => somador_pc:port_map_somador_pc.clock
+clock => pc:port_map_pc.clock
+clock => mem_rom:port_map_mem_rom.clock
+clock => unidade_controle:port_map_unidade_controle.clock
+clock => banco_de_registradores:port_map_banco_de_registradores.clock
+clock => ula:port_map_ula.clock
+clock => mem_ram:port_map_mem_ram.clock
+out_out_pc[0] << pc:port_map_pc.out_port[0]
+out_out_pc[1] << pc:port_map_pc.out_port[1]
+out_out_pc[2] << pc:port_map_pc.out_port[2]
+out_out_pc[3] << pc:port_map_pc.out_port[3]
+out_out_pc[4] << pc:port_map_pc.out_port[4]
+out_out_pc[5] << pc:port_map_pc.out_port[5]
+out_out_pc[6] << pc:port_map_pc.out_port[6]
+out_out_pc[7] << pc:port_map_pc.out_port[7]
+out_out_rom[0] << mem_rom:port_map_mem_rom.out_port[0]
+out_out_rom[1] << mem_rom:port_map_mem_rom.out_port[1]
+out_out_rom[2] << mem_rom:port_map_mem_rom.out_port[2]
+out_out_rom[3] << mem_rom:port_map_mem_rom.out_port[3]
+out_out_rom[4] << mem_rom:port_map_mem_rom.out_port[4]
+out_out_rom[5] << mem_rom:port_map_mem_rom.out_port[5]
+out_out_rom[6] << mem_rom:port_map_mem_rom.out_port[6]
+out_out_rom[7] << mem_rom:port_map_mem_rom.out_port[7]
+out_opcode[0] << divisao_da_instrucao:port_map_divisao_da_instrucao.out_op_code[0]
+out_opcode[1] << divisao_da_instrucao:port_map_divisao_da_instrucao.out_op_code[1]
+out_opcode[2] << divisao_da_instrucao:port_map_divisao_da_instrucao.out_op_code[2]
+out_opcode[3] << divisao_da_instrucao:port_map_divisao_da_instrucao.out_op_code[3]
+out_rs[0] << divisao_da_instrucao:port_map_divisao_da_instrucao.out_rs[0]
+out_rs[1] << divisao_da_instrucao:port_map_divisao_da_instrucao.out_rs[1]
+out_rt[0] << divisao_da_instrucao:port_map_divisao_da_instrucao.out_rt[0]
+out_rt[1] << divisao_da_instrucao:port_map_divisao_da_instrucao.out_rt[1]
+out_endereco[0] << divisao_da_instrucao:port_map_divisao_da_instrucao.out_jump[0]
+out_endereco[1] << divisao_da_instrucao:port_map_divisao_da_instrucao.out_jump[1]
+out_endereco[2] << divisao_da_instrucao:port_map_divisao_da_instrucao.out_jump[2]
+out_endereco[3] << divisao_da_instrucao:port_map_divisao_da_instrucao.out_jump[3]
+out_out_mem_ram[0] << mem_ram:port_map_mem_ram.out_port[0]
+out_out_mem_ram[1] << mem_ram:port_map_mem_ram.out_port[1]
+out_out_mem_ram[2] << mem_ram:port_map_mem_ram.out_port[2]
+out_out_mem_ram[3] << mem_ram:port_map_mem_ram.out_port[3]
+out_out_mem_ram[4] << mem_ram:port_map_mem_ram.out_port[4]
+out_out_mem_ram[5] << mem_ram:port_map_mem_ram.out_port[5]
+out_out_mem_ram[6] << mem_ram:port_map_mem_ram.out_port[6]
+out_out_mem_ram[7] << mem_ram:port_map_mem_ram.out_port[7]
+out_out_br_reg_A[0] << banco_de_registradores:port_map_banco_de_registradores.reg_out_A[0]
+out_out_br_reg_A[1] << banco_de_registradores:port_map_banco_de_registradores.reg_out_A[1]
+out_out_br_reg_A[2] << banco_de_registradores:port_map_banco_de_registradores.reg_out_A[2]
+out_out_br_reg_A[3] << banco_de_registradores:port_map_banco_de_registradores.reg_out_A[3]
+out_out_br_reg_A[4] << banco_de_registradores:port_map_banco_de_registradores.reg_out_A[4]
+out_out_br_reg_A[5] << banco_de_registradores:port_map_banco_de_registradores.reg_out_A[5]
+out_out_br_reg_A[6] << banco_de_registradores:port_map_banco_de_registradores.reg_out_A[6]
+out_out_br_reg_A[7] << banco_de_registradores:port_map_banco_de_registradores.reg_out_A[7]
+out_out_br_reg_B[0] << banco_de_registradores:port_map_banco_de_registradores.reg_out_B[0]
+out_out_br_reg_B[1] << banco_de_registradores:port_map_banco_de_registradores.reg_out_B[1]
+out_out_br_reg_B[2] << banco_de_registradores:port_map_banco_de_registradores.reg_out_B[2]
+out_out_br_reg_B[3] << banco_de_registradores:port_map_banco_de_registradores.reg_out_B[3]
+out_out_br_reg_B[4] << banco_de_registradores:port_map_banco_de_registradores.reg_out_B[4]
+out_out_br_reg_B[5] << banco_de_registradores:port_map_banco_de_registradores.reg_out_B[5]
+out_out_br_reg_B[6] << banco_de_registradores:port_map_banco_de_registradores.reg_out_B[6]
+out_out_br_reg_B[7] << banco_de_registradores:port_map_banco_de_registradores.reg_out_B[7]
+out_out_ula_result[0] << ula:port_map_ula.out_ula_result[0]
+out_out_ula_result[1] << ula:port_map_ula.out_ula_result[1]
+out_out_ula_result[2] << ula:port_map_ula.out_ula_result[2]
+out_out_ula_result[3] << ula:port_map_ula.out_ula_result[3]
+out_out_ula_result[4] << ula:port_map_ula.out_ula_result[4]
+out_out_ula_result[5] << ula:port_map_ula.out_ula_result[5]
+out_out_ula_result[6] << ula:port_map_ula.out_ula_result[6]
+out_out_ula_result[7] << ula:port_map_ula.out_ula_result[7]
+out_out_overflow << ula:port_map_ula.overflow
+out_out_memoria_ram[0] << comb.DB_MAX_OUTPUT_PORT_TYPE
+out_out_memoria_ram[1] << out_out_memoria_ram[1].DB_MAX_OUTPUT_PORT_TYPE
+out_out_memoria_ram[2] << out_out_memoria_ram[2].DB_MAX_OUTPUT_PORT_TYPE
+out_out_memoria_ram[3] << out_out_memoria_ram[3].DB_MAX_OUTPUT_PORT_TYPE
+out_out_memoria_ram[4] << out_out_memoria_ram[4].DB_MAX_OUTPUT_PORT_TYPE
+out_out_memoria_ram[5] << out_out_memoria_ram[5].DB_MAX_OUTPUT_PORT_TYPE
+out_out_memoria_ram[6] << out_out_memoria_ram[6].DB_MAX_OUTPUT_PORT_TYPE
+out_out_memoria_ram[7] << out_out_memoria_ram[7].DB_MAX_OUTPUT_PORT_TYPE
+out_out_mult_2x1_ram_ula[0] << mult_2x1:port_map_mult_2X1_ram_ula.out_port[0]
+out_out_mult_2x1_ram_ula[1] << mult_2x1:port_map_mult_2X1_ram_ula.out_port[1]
+out_out_mult_2x1_ram_ula[2] << mult_2x1:port_map_mult_2X1_ram_ula.out_port[2]
+out_out_mult_2x1_ram_ula[3] << mult_2x1:port_map_mult_2X1_ram_ula.out_port[3]
+out_out_mult_2x1_ram_ula[4] << mult_2x1:port_map_mult_2X1_ram_ula.out_port[4]
+out_out_mult_2x1_ram_ula[5] << mult_2x1:port_map_mult_2X1_ram_ula.out_port[5]
+out_out_mult_2x1_ram_ula[6] << mult_2x1:port_map_mult_2X1_ram_ula.out_port[6]
+out_out_mult_2x1_ram_ula[7] << mult_2x1:port_map_mult_2X1_ram_ula.out_port[7]
+
+
+|processador_GE_22|somador_pc:port_map_somador_pc
+clock => ~NO_FANOUT~
+in_port[0] => Add0.IN16
+in_port[1] => Add0.IN15
+in_port[2] => Add0.IN14
+in_port[3] => Add0.IN13
+in_port[4] => Add0.IN12
+in_port[5] => Add0.IN11
+in_port[6] => Add0.IN10
+in_port[7] => Add0.IN9
+out_port[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out_port[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out_port[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out_port[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out_port[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out_port[5] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out_port[6] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out_port[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|pc:port_map_pc
+clock => out_port[0]~reg0.CLK
+clock => out_port[1]~reg0.CLK
+clock => out_port[2]~reg0.CLK
+clock => out_port[3]~reg0.CLK
+clock => out_port[4]~reg0.CLK
+clock => out_port[5]~reg0.CLK
+clock => out_port[6]~reg0.CLK
+clock => out_port[7]~reg0.CLK
+in_port[0] => out_port[0]~reg0.DATAIN
+in_port[1] => out_port[1]~reg0.DATAIN
+in_port[2] => out_port[2]~reg0.DATAIN
+in_port[3] => out_port[3]~reg0.DATAIN
+in_port[4] => out_port[4]~reg0.DATAIN
+in_port[5] => out_port[5]~reg0.DATAIN
+in_port[6] => out_port[6]~reg0.DATAIN
+in_port[7] => out_port[7]~reg0.DATAIN
+out_port[0] <= out_port[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out_port[1] <= out_port[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out_port[2] <= out_port[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out_port[3] <= out_port[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out_port[4] <= out_port[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out_port[5] <= out_port[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out_port[6] <= out_port[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out_port[7] <= out_port[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|mem_rom:port_map_mem_rom
+clock => ~NO_FANOUT~
+in_port[0] => Mux0.IN263
+in_port[0] => Mux1.IN263
+in_port[0] => Mux2.IN263
+in_port[0] => Mux3.IN263
+in_port[0] => Mux4.IN263
+in_port[0] => Mux5.IN263
+in_port[0] => Mux6.IN263
+in_port[0] => Mux7.IN263
+in_port[1] => Mux0.IN262
+in_port[1] => Mux1.IN262
+in_port[1] => Mux2.IN262
+in_port[1] => Mux3.IN262
+in_port[1] => Mux4.IN262
+in_port[1] => Mux5.IN262
+in_port[1] => Mux6.IN262
+in_port[1] => Mux7.IN262
+in_port[2] => Mux0.IN261
+in_port[2] => Mux1.IN261
+in_port[2] => Mux2.IN261
+in_port[2] => Mux3.IN261
+in_port[2] => Mux4.IN261
+in_port[2] => Mux5.IN261
+in_port[2] => Mux6.IN261
+in_port[2] => Mux7.IN261
+in_port[3] => Mux0.IN260
+in_port[3] => Mux1.IN260
+in_port[3] => Mux2.IN260
+in_port[3] => Mux3.IN260
+in_port[3] => Mux4.IN260
+in_port[3] => Mux5.IN260
+in_port[3] => Mux6.IN260
+in_port[3] => Mux7.IN260
+in_port[4] => Mux0.IN259
+in_port[4] => Mux1.IN259
+in_port[4] => Mux2.IN259
+in_port[4] => Mux3.IN259
+in_port[4] => Mux4.IN259
+in_port[4] => Mux5.IN259
+in_port[4] => Mux6.IN259
+in_port[4] => Mux7.IN259
+in_port[5] => Mux0.IN258
+in_port[5] => Mux1.IN258
+in_port[5] => Mux2.IN258
+in_port[5] => Mux3.IN258
+in_port[5] => Mux4.IN258
+in_port[5] => Mux5.IN258
+in_port[5] => Mux6.IN258
+in_port[5] => Mux7.IN258
+in_port[6] => Mux0.IN257
+in_port[6] => Mux1.IN257
+in_port[6] => Mux2.IN257
+in_port[6] => Mux3.IN257
+in_port[6] => Mux4.IN257
+in_port[6] => Mux5.IN257
+in_port[6] => Mux6.IN257
+in_port[6] => Mux7.IN257
+in_port[7] => Mux0.IN256
+in_port[7] => Mux1.IN256
+in_port[7] => Mux2.IN256
+in_port[7] => Mux3.IN256
+in_port[7] => Mux4.IN256
+in_port[7] => Mux5.IN256
+in_port[7] => Mux6.IN256
+in_port[7] => Mux7.IN256
+out_port[0] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+out_port[1] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+out_port[2] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+out_port[3] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+out_port[4] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+out_port[5] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+out_port[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+out_port[7] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|divisao_da_instrucao:port_map_divisao_da_instrucao
+in_port[0] => out_jump[0].DATAIN
+in_port[0] => out_rt[0].DATAIN
+in_port[1] => out_jump[1].DATAIN
+in_port[1] => out_rt[1].DATAIN
+in_port[2] => out_jump[2].DATAIN
+in_port[2] => out_rs[0].DATAIN
+in_port[3] => out_jump[3].DATAIN
+in_port[3] => out_rs[1].DATAIN
+in_port[4] => out_op_code[0].DATAIN
+in_port[5] => out_op_code[1].DATAIN
+in_port[6] => out_op_code[2].DATAIN
+in_port[7] => out_op_code[3].DATAIN
+out_op_code[0] <= in_port[4].DB_MAX_OUTPUT_PORT_TYPE
+out_op_code[1] <= in_port[5].DB_MAX_OUTPUT_PORT_TYPE
+out_op_code[2] <= in_port[6].DB_MAX_OUTPUT_PORT_TYPE
+out_op_code[3] <= in_port[7].DB_MAX_OUTPUT_PORT_TYPE
+out_rs[0] <= in_port[2].DB_MAX_OUTPUT_PORT_TYPE
+out_rs[1] <= in_port[3].DB_MAX_OUTPUT_PORT_TYPE
+out_rt[0] <= in_port[0].DB_MAX_OUTPUT_PORT_TYPE
+out_rt[1] <= in_port[1].DB_MAX_OUTPUT_PORT_TYPE
+out_jump[0] <= in_port[0].DB_MAX_OUTPUT_PORT_TYPE
+out_jump[1] <= in_port[1].DB_MAX_OUTPUT_PORT_TYPE
+out_jump[2] <= in_port[2].DB_MAX_OUTPUT_PORT_TYPE
+out_jump[3] <= in_port[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|unidade_controle:port_map_unidade_controle
+clock => ~NO_FANOUT~
+op_code[0] => Mux0.IN19
+op_code[0] => Mux2.IN19
+op_code[0] => Mux3.IN19
+op_code[0] => Mux5.IN10
+op_code[0] => Mux6.IN19
+op_code[0] => Mux7.IN19
+op_code[0] => Mux8.IN19
+op_code[1] => Mux0.IN18
+op_code[1] => Mux1.IN10
+op_code[1] => Mux2.IN18
+op_code[1] => Mux3.IN18
+op_code[1] => Mux4.IN10
+op_code[1] => Mux6.IN18
+op_code[1] => Mux7.IN18
+op_code[1] => Mux8.IN18
+op_code[2] => Mux0.IN17
+op_code[2] => Mux1.IN9
+op_code[2] => Mux2.IN17
+op_code[2] => Mux3.IN17
+op_code[2] => Mux4.IN9
+op_code[2] => Mux5.IN9
+op_code[2] => Mux6.IN17
+op_code[2] => Mux7.IN17
+op_code[2] => Mux8.IN17
+op_code[2] => ula_op[2].DATAIN
+op_code[3] => Mux0.IN16
+op_code[3] => Mux1.IN8
+op_code[3] => Mux2.IN16
+op_code[3] => Mux3.IN16
+op_code[3] => Mux4.IN8
+op_code[3] => Mux5.IN8
+op_code[3] => Mux6.IN16
+op_code[3] => Mux7.IN16
+op_code[3] => Mux8.IN16
+op_code[3] => ula_op[3].DATAIN
+jump <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+branch <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+mem_read <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+mem_to_reg <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+ula_op[0] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+ula_op[1] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+ula_op[2] <= op_code[2].DB_MAX_OUTPUT_PORT_TYPE
+ula_op[3] <= op_code[3].DB_MAX_OUTPUT_PORT_TYPE
+mem_write <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+ula_src <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+reg_write <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|banco_de_registradores:port_map_banco_de_registradores
+clock => registrador~10.CLK
+clock => registrador~0.CLK
+clock => registrador~1.CLK
+clock => registrador~2.CLK
+clock => registrador~3.CLK
+clock => registrador~4.CLK
+clock => registrador~5.CLK
+clock => registrador~6.CLK
+clock => registrador~7.CLK
+clock => registrador~8.CLK
+clock => registrador~9.CLK
+clock => registrador.CLK0
+reg_write => registrador~10.DATAIN
+reg_write => registrador.WE
+endereco_reg_A[0] => registrador~1.DATAIN
+endereco_reg_A[0] => registrador.WADDR
+endereco_reg_A[0] => registrador.RADDR
+endereco_reg_A[1] => registrador~0.DATAIN
+endereco_reg_A[1] => registrador.WADDR1
+endereco_reg_A[1] => registrador.RADDR1
+endereco_reg_B[0] => registrador.PORTBRADDR
+endereco_reg_B[1] => registrador.PORTBRADDR1
+write_data[0] => registrador~9.DATAIN
+write_data[0] => registrador.DATAIN
+write_data[1] => registrador~8.DATAIN
+write_data[1] => registrador.DATAIN1
+write_data[2] => registrador~7.DATAIN
+write_data[2] => registrador.DATAIN2
+write_data[3] => registrador~6.DATAIN
+write_data[3] => registrador.DATAIN3
+write_data[4] => registrador~5.DATAIN
+write_data[4] => registrador.DATAIN4
+write_data[5] => registrador~4.DATAIN
+write_data[5] => registrador.DATAIN5
+write_data[6] => registrador~3.DATAIN
+write_data[6] => registrador.DATAIN6
+write_data[7] => registrador~2.DATAIN
+write_data[7] => registrador.DATAIN7
+reg_out_A[0] <= registrador.DATAOUT
+reg_out_A[1] <= registrador.DATAOUT1
+reg_out_A[2] <= registrador.DATAOUT2
+reg_out_A[3] <= registrador.DATAOUT3
+reg_out_A[4] <= registrador.DATAOUT4
+reg_out_A[5] <= registrador.DATAOUT5
+reg_out_A[6] <= registrador.DATAOUT6
+reg_out_A[7] <= registrador.DATAOUT7
+reg_out_B[0] <= registrador.PORTBDATAOUT
+reg_out_B[1] <= registrador.PORTBDATAOUT1
+reg_out_B[2] <= registrador.PORTBDATAOUT2
+reg_out_B[3] <= registrador.PORTBDATAOUT3
+reg_out_B[4] <= registrador.PORTBDATAOUT4
+reg_out_B[5] <= registrador.PORTBDATAOUT5
+reg_out_B[6] <= registrador.PORTBDATAOUT6
+reg_out_B[7] <= registrador.PORTBDATAOUT7
+
+
+|processador_GE_22|extensor_sinal2_8:port_map_extensor_sinal2_8
+in_port[0] => out_port[0].DATAIN
+in_port[1] => out_port[1].DATAIN
+out_port[0] <= in_port[0].DB_MAX_OUTPUT_PORT_TYPE
+out_port[1] <= in_port[1].DB_MAX_OUTPUT_PORT_TYPE
+out_port[2] <= <GND>
+out_port[3] <= <GND>
+out_port[4] <= <GND>
+out_port[5] <= <GND>
+out_port[6] <= <GND>
+out_port[7] <= <GND>
+
+
+|processador_GE_22|mult_2x1:port_map_mult_2X1_br_ula
+in_port => out_port.OUTPUTSELECT
+in_port => out_port.OUTPUTSELECT
+in_port => out_port.OUTPUTSELECT
+in_port => out_port.OUTPUTSELECT
+in_port => out_port.OUTPUTSELECT
+in_port => out_port.OUTPUTSELECT
+in_port => out_port.OUTPUTSELECT
+in_port => out_port.OUTPUTSELECT
+in_A[0] => out_port.DATAB
+in_A[1] => out_port.DATAB
+in_A[2] => out_port.DATAB
+in_A[3] => out_port.DATAB
+in_A[4] => out_port.DATAB
+in_A[5] => out_port.DATAB
+in_A[6] => out_port.DATAB
+in_A[7] => out_port.DATAB
+in_B[0] => out_port.DATAA
+in_B[1] => out_port.DATAA
+in_B[2] => out_port.DATAA
+in_B[3] => out_port.DATAA
+in_B[4] => out_port.DATAA
+in_B[5] => out_port.DATAA
+in_B[6] => out_port.DATAA
+in_B[7] => out_port.DATAA
+out_port[0] <= out_port.DB_MAX_OUTPUT_PORT_TYPE
+out_port[1] <= out_port.DB_MAX_OUTPUT_PORT_TYPE
+out_port[2] <= out_port.DB_MAX_OUTPUT_PORT_TYPE
+out_port[3] <= out_port.DB_MAX_OUTPUT_PORT_TYPE
+out_port[4] <= out_port.DB_MAX_OUTPUT_PORT_TYPE
+out_port[5] <= out_port.DB_MAX_OUTPUT_PORT_TYPE
+out_port[6] <= out_port.DB_MAX_OUTPUT_PORT_TYPE
+out_port[7] <= out_port.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula
+clock => ~NO_FANOUT~
+ula_op[0] => Mux4.IN10
+ula_op[0] => Mux5.IN10
+ula_op[0] => Mux6.IN10
+ula_op[0] => Mux7.IN10
+ula_op[0] => Mux8.IN10
+ula_op[0] => Mux9.IN10
+ula_op[0] => Mux10.IN10
+ula_op[0] => Mux11.IN10
+ula_op[0] => Mux3.IN19
+ula_op[0] => Mux2.IN19
+ula_op[0] => Mux1.IN18
+ula_op[0] => Mux0.IN19
+ula_op[0] => Mux12.IN17
+ula_op[0] => Mux13.IN19
+ula_op[1] => Mux4.IN9
+ula_op[1] => Mux5.IN9
+ula_op[1] => Mux6.IN9
+ula_op[1] => Mux7.IN9
+ula_op[1] => Mux8.IN9
+ula_op[1] => Mux9.IN9
+ula_op[1] => Mux10.IN9
+ula_op[1] => Mux11.IN9
+ula_op[1] => Mux3.IN18
+ula_op[1] => Mux2.IN18
+ula_op[1] => Mux1.IN17
+ula_op[1] => Mux0.IN18
+ula_op[1] => Mux12.IN16
+ula_op[1] => Mux13.IN18
+ula_op[2] => Mux4.IN8
+ula_op[2] => Mux5.IN8
+ula_op[2] => Mux6.IN8
+ula_op[2] => Mux7.IN8
+ula_op[2] => Mux8.IN8
+ula_op[2] => Mux9.IN8
+ula_op[2] => Mux10.IN8
+ula_op[2] => Mux11.IN8
+ula_op[2] => Mux3.IN17
+ula_op[2] => Mux2.IN17
+ula_op[2] => Mux1.IN16
+ula_op[2] => Mux0.IN17
+ula_op[2] => Mux12.IN15
+ula_op[2] => Mux13.IN17
+ula_op[3] => Mux4.IN7
+ula_op[3] => Mux5.IN7
+ula_op[3] => Mux6.IN7
+ula_op[3] => Mux7.IN7
+ula_op[3] => Mux8.IN7
+ula_op[3] => Mux9.IN7
+ula_op[3] => Mux10.IN7
+ula_op[3] => Mux11.IN7
+ula_op[3] => Mux3.IN16
+ula_op[3] => Mux2.IN16
+ula_op[3] => Mux1.IN15
+ula_op[3] => Mux0.IN16
+ula_op[3] => Mux12.IN14
+ula_op[3] => Mux13.IN16
+in_port_A[0] => Equal0.IN7
+in_port_A[0] => Mux11.IN11
+in_port_A[0] => Mux11.IN12
+in_port_A[0] => multi:port_map_multi.in_port_A[0]
+in_port_A[0] => adder_8_bits:port_map_adder.A[0]
+in_port_A[0] => sub_8_bits:port_map_sub.A[0]
+in_port_A[1] => Equal0.IN6
+in_port_A[1] => Mux10.IN11
+in_port_A[1] => Mux10.IN12
+in_port_A[1] => multi:port_map_multi.in_port_A[1]
+in_port_A[1] => adder_8_bits:port_map_adder.A[1]
+in_port_A[1] => sub_8_bits:port_map_sub.A[1]
+in_port_A[2] => Equal0.IN5
+in_port_A[2] => Mux9.IN11
+in_port_A[2] => Mux9.IN12
+in_port_A[2] => multi:port_map_multi.in_port_A[2]
+in_port_A[2] => adder_8_bits:port_map_adder.A[2]
+in_port_A[2] => sub_8_bits:port_map_sub.A[2]
+in_port_A[3] => Equal0.IN4
+in_port_A[3] => Mux8.IN11
+in_port_A[3] => Mux8.IN12
+in_port_A[3] => multi:port_map_multi.in_port_A[3]
+in_port_A[3] => adder_8_bits:port_map_adder.A[3]
+in_port_A[3] => sub_8_bits:port_map_sub.A[3]
+in_port_A[4] => Equal0.IN3
+in_port_A[4] => Mux7.IN11
+in_port_A[4] => Mux7.IN12
+in_port_A[4] => multi:port_map_multi.in_port_A[4]
+in_port_A[4] => adder_8_bits:port_map_adder.A[4]
+in_port_A[4] => sub_8_bits:port_map_sub.A[4]
+in_port_A[5] => Equal0.IN2
+in_port_A[5] => Mux6.IN11
+in_port_A[5] => Mux6.IN12
+in_port_A[5] => multi:port_map_multi.in_port_A[5]
+in_port_A[5] => adder_8_bits:port_map_adder.A[5]
+in_port_A[5] => sub_8_bits:port_map_sub.A[5]
+in_port_A[6] => Equal0.IN1
+in_port_A[6] => Mux5.IN11
+in_port_A[6] => Mux5.IN12
+in_port_A[6] => multi:port_map_multi.in_port_A[6]
+in_port_A[6] => adder_8_bits:port_map_adder.A[6]
+in_port_A[6] => sub_8_bits:port_map_sub.A[6]
+in_port_A[7] => Equal0.IN0
+in_port_A[7] => Mux4.IN11
+in_port_A[7] => Mux4.IN12
+in_port_A[7] => multi:port_map_multi.in_port_A[7]
+in_port_A[7] => adder_8_bits:port_map_adder.A[7]
+in_port_A[7] => sub_8_bits:port_map_sub.A[7]
+in_port_B[0] => Equal0.IN15
+in_port_B[0] => Mux11.IN13
+in_port_B[0] => Mux11.IN14
+in_port_B[0] => multi:port_map_multi.in_port_B[0]
+in_port_B[0] => adder_8_bits:port_map_adder.B[0]
+in_port_B[0] => sub_8_bits:port_map_sub.B[0]
+in_port_B[1] => Equal0.IN14
+in_port_B[1] => Mux10.IN13
+in_port_B[1] => Mux10.IN14
+in_port_B[1] => multi:port_map_multi.in_port_B[1]
+in_port_B[1] => adder_8_bits:port_map_adder.B[1]
+in_port_B[1] => sub_8_bits:port_map_sub.B[1]
+in_port_B[2] => Equal0.IN13
+in_port_B[2] => Mux9.IN13
+in_port_B[2] => Mux9.IN14
+in_port_B[2] => multi:port_map_multi.in_port_B[2]
+in_port_B[2] => adder_8_bits:port_map_adder.B[2]
+in_port_B[2] => sub_8_bits:port_map_sub.B[2]
+in_port_B[3] => Equal0.IN12
+in_port_B[3] => Mux8.IN13
+in_port_B[3] => Mux8.IN14
+in_port_B[3] => multi:port_map_multi.in_port_B[3]
+in_port_B[3] => adder_8_bits:port_map_adder.B[3]
+in_port_B[3] => sub_8_bits:port_map_sub.B[3]
+in_port_B[4] => Equal0.IN11
+in_port_B[4] => Mux7.IN13
+in_port_B[4] => Mux7.IN14
+in_port_B[4] => multi:port_map_multi.in_port_B[4]
+in_port_B[4] => adder_8_bits:port_map_adder.B[4]
+in_port_B[4] => sub_8_bits:port_map_sub.B[4]
+in_port_B[5] => Equal0.IN10
+in_port_B[5] => Mux6.IN13
+in_port_B[5] => Mux6.IN14
+in_port_B[5] => multi:port_map_multi.in_port_B[5]
+in_port_B[5] => adder_8_bits:port_map_adder.B[5]
+in_port_B[5] => sub_8_bits:port_map_sub.B[5]
+in_port_B[6] => Equal0.IN9
+in_port_B[6] => Mux5.IN13
+in_port_B[6] => Mux5.IN14
+in_port_B[6] => multi:port_map_multi.in_port_B[6]
+in_port_B[6] => adder_8_bits:port_map_adder.B[6]
+in_port_B[6] => sub_8_bits:port_map_sub.B[6]
+in_port_B[7] => Equal0.IN8
+in_port_B[7] => Mux4.IN13
+in_port_B[7] => Mux4.IN14
+in_port_B[7] => multi:port_map_multi.in_port_B[7]
+in_port_B[7] => adder_8_bits:port_map_adder.B[7]
+in_port_B[7] => sub_8_bits:port_map_sub.B[7]
+out_ula_result[0] <= Mux11.DB_MAX_OUTPUT_PORT_TYPE
+out_ula_result[1] <= Mux10.DB_MAX_OUTPUT_PORT_TYPE
+out_ula_result[2] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
+out_ula_result[3] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
+out_ula_result[4] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+out_ula_result[5] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+out_ula_result[6] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+out_ula_result[7] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+zero <= zero$latch.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|temp_zero:port_map_temp_zero
+in_port => out_port.DATAIN
+out_port <= in_port.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|multi:port_map_multi
+in_port_A[0] => Add1.IN16
+in_port_A[0] => Add3.IN16
+in_port_A[0] => Add5.IN16
+in_port_A[0] => Add7.IN16
+in_port_A[0] => Add9.IN16
+in_port_A[0] => Add11.IN16
+in_port_A[0] => Add13.IN16
+in_port_A[0] => Add2.IN8
+in_port_A[0] => Add4.IN8
+in_port_A[0] => Add6.IN8
+in_port_A[0] => Add8.IN8
+in_port_A[0] => Add10.IN8
+in_port_A[0] => Add12.IN8
+in_port_A[0] => Add14.IN8
+in_port_A[0] => Add0.IN7
+in_port_A[1] => Add1.IN15
+in_port_A[1] => Add3.IN15
+in_port_A[1] => Add5.IN15
+in_port_A[1] => Add7.IN15
+in_port_A[1] => Add9.IN15
+in_port_A[1] => Add11.IN15
+in_port_A[1] => Add13.IN15
+in_port_A[1] => Add2.IN7
+in_port_A[1] => Add4.IN7
+in_port_A[1] => Add6.IN7
+in_port_A[1] => Add8.IN7
+in_port_A[1] => Add10.IN7
+in_port_A[1] => Add12.IN7
+in_port_A[1] => Add14.IN7
+in_port_A[1] => Add0.IN6
+in_port_A[2] => Add1.IN14
+in_port_A[2] => Add3.IN14
+in_port_A[2] => Add5.IN14
+in_port_A[2] => Add7.IN14
+in_port_A[2] => Add9.IN14
+in_port_A[2] => Add11.IN14
+in_port_A[2] => Add13.IN14
+in_port_A[2] => Add2.IN6
+in_port_A[2] => Add4.IN6
+in_port_A[2] => Add6.IN6
+in_port_A[2] => Add8.IN6
+in_port_A[2] => Add10.IN6
+in_port_A[2] => Add12.IN6
+in_port_A[2] => Add14.IN6
+in_port_A[2] => Add0.IN5
+in_port_A[3] => Add1.IN13
+in_port_A[3] => Add3.IN13
+in_port_A[3] => Add5.IN13
+in_port_A[3] => Add7.IN13
+in_port_A[3] => Add9.IN13
+in_port_A[3] => Add11.IN13
+in_port_A[3] => Add13.IN13
+in_port_A[3] => Add2.IN5
+in_port_A[3] => Add4.IN5
+in_port_A[3] => Add6.IN5
+in_port_A[3] => Add8.IN5
+in_port_A[3] => Add10.IN5
+in_port_A[3] => Add12.IN5
+in_port_A[3] => Add14.IN5
+in_port_A[3] => Add0.IN4
+in_port_A[4] => Add1.IN12
+in_port_A[4] => Add3.IN12
+in_port_A[4] => Add5.IN12
+in_port_A[4] => Add7.IN12
+in_port_A[4] => Add9.IN12
+in_port_A[4] => Add11.IN12
+in_port_A[4] => Add13.IN12
+in_port_A[4] => Add2.IN4
+in_port_A[4] => Add4.IN4
+in_port_A[4] => Add6.IN4
+in_port_A[4] => Add8.IN4
+in_port_A[4] => Add10.IN4
+in_port_A[4] => Add12.IN4
+in_port_A[4] => Add14.IN4
+in_port_A[4] => Add0.IN3
+in_port_A[5] => Add1.IN11
+in_port_A[5] => Add3.IN11
+in_port_A[5] => Add5.IN11
+in_port_A[5] => Add7.IN11
+in_port_A[5] => Add9.IN11
+in_port_A[5] => Add11.IN11
+in_port_A[5] => Add13.IN11
+in_port_A[5] => Add2.IN3
+in_port_A[5] => Add4.IN3
+in_port_A[5] => Add6.IN3
+in_port_A[5] => Add8.IN3
+in_port_A[5] => Add10.IN3
+in_port_A[5] => Add12.IN3
+in_port_A[5] => Add14.IN3
+in_port_A[5] => Add0.IN2
+in_port_A[6] => Add1.IN10
+in_port_A[6] => Add3.IN10
+in_port_A[6] => Add5.IN10
+in_port_A[6] => Add7.IN10
+in_port_A[6] => Add9.IN10
+in_port_A[6] => Add11.IN10
+in_port_A[6] => Add13.IN10
+in_port_A[6] => Add2.IN2
+in_port_A[6] => Add4.IN2
+in_port_A[6] => Add6.IN2
+in_port_A[6] => Add8.IN2
+in_port_A[6] => Add10.IN2
+in_port_A[6] => Add12.IN2
+in_port_A[6] => Add14.IN2
+in_port_A[6] => Add0.IN1
+in_port_A[7] => Add1.IN9
+in_port_A[7] => Add3.IN9
+in_port_A[7] => Add5.IN9
+in_port_A[7] => Add7.IN9
+in_port_A[7] => Add9.IN9
+in_port_A[7] => Add11.IN9
+in_port_A[7] => Add13.IN9
+in_port_A[7] => Add2.IN1
+in_port_A[7] => Add4.IN1
+in_port_A[7] => Add6.IN1
+in_port_A[7] => Add8.IN1
+in_port_A[7] => Add10.IN1
+in_port_A[7] => Add12.IN1
+in_port_A[7] => Add14.IN1
+in_port_A[7] => Add0.IN0
+in_port_B[0] => produto.OUTPUTSELECT
+in_port_B[0] => produto.OUTPUTSELECT
+in_port_B[0] => produto.OUTPUTSELECT
+in_port_B[0] => produto.OUTPUTSELECT
+in_port_B[0] => produto.OUTPUTSELECT
+in_port_B[0] => produto.OUTPUTSELECT
+in_port_B[0] => produto.OUTPUTSELECT
+in_port_B[0] => produto.OUTPUTSELECT
+in_port_B[0] => process_0.IN0
+in_port_B[0] => process_0.IN0
+in_port_B[1] => process_0.IN1
+in_port_B[1] => process_0.IN0
+in_port_B[1] => process_0.IN1
+in_port_B[1] => process_0.IN0
+in_port_B[2] => process_0.IN1
+in_port_B[2] => process_0.IN0
+in_port_B[2] => process_0.IN1
+in_port_B[2] => process_0.IN0
+in_port_B[3] => process_0.IN1
+in_port_B[3] => process_0.IN0
+in_port_B[3] => process_0.IN1
+in_port_B[3] => process_0.IN0
+in_port_B[4] => process_0.IN1
+in_port_B[4] => process_0.IN0
+in_port_B[4] => process_0.IN1
+in_port_B[4] => process_0.IN0
+in_port_B[5] => process_0.IN1
+in_port_B[5] => process_0.IN0
+in_port_B[5] => process_0.IN1
+in_port_B[5] => process_0.IN0
+in_port_B[6] => process_0.IN1
+in_port_B[6] => process_0.IN0
+in_port_B[6] => process_0.IN1
+in_port_B[6] => process_0.IN0
+in_port_B[7] => process_0.IN1
+in_port_B[7] => process_0.IN1
+out_port[0] <= produto.DB_MAX_OUTPUT_PORT_TYPE
+out_port[1] <= produto.DB_MAX_OUTPUT_PORT_TYPE
+out_port[2] <= produto.DB_MAX_OUTPUT_PORT_TYPE
+out_port[3] <= produto.DB_MAX_OUTPUT_PORT_TYPE
+out_port[4] <= produto.DB_MAX_OUTPUT_PORT_TYPE
+out_port[5] <= produto.DB_MAX_OUTPUT_PORT_TYPE
+out_port[6] <= produto.DB_MAX_OUTPUT_PORT_TYPE
+out_port[7] <= produto.DB_MAX_OUTPUT_PORT_TYPE
+out_port[8] <= produto.DB_MAX_OUTPUT_PORT_TYPE
+out_port[9] <= produto.DB_MAX_OUTPUT_PORT_TYPE
+out_port[10] <= produto.DB_MAX_OUTPUT_PORT_TYPE
+out_port[11] <= produto.DB_MAX_OUTPUT_PORT_TYPE
+out_port[12] <= produto.DB_MAX_OUTPUT_PORT_TYPE
+out_port[13] <= produto.DB_MAX_OUTPUT_PORT_TYPE
+out_port[14] <= produto.DB_MAX_OUTPUT_PORT_TYPE
+out_port[15] <= produto.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|adder_8_bits:port_map_adder
+A[0] => full_adder:A0.A
+A[1] => full_adder:A1.A
+A[2] => full_adder:A2.A
+A[3] => full_adder:A3.A
+A[4] => full_adder:A4.A
+A[5] => full_adder:A5.A
+A[6] => full_adder:A6.A
+A[7] => full_adder:A7.A
+B[0] => full_adder:A0.B
+B[1] => full_adder:A1.B
+B[2] => full_adder:A2.B
+B[3] => full_adder:A3.B
+B[4] => full_adder:A4.B
+B[5] => full_adder:A5.B
+B[6] => full_adder:A6.B
+B[7] => full_adder:A7.B
+sinal => full_adder:A0.cin
+result[0] <= full_adder:A0.sum
+result[1] <= full_adder:A1.sum
+result[2] <= full_adder:A2.sum
+result[3] <= full_adder:A3.sum
+result[4] <= full_adder:A4.sum
+result[5] <= full_adder:A5.sum
+result[6] <= full_adder:A6.sum
+result[7] <= full_adder:A7.sum
+cout <= full_adder:A7.cout
+
+
+|processador_GE_22|ula:port_map_ula|adder_8_bits:port_map_adder|full_adder:A0
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+cin => half_adder:ha2.B
+sum <= half_adder:ha2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|adder_8_bits:port_map_adder|full_adder:A0|half_adder:ha1
+A => sum.IN0
+A => cout.IN0
+B => sum.IN1
+B => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|adder_8_bits:port_map_adder|full_adder:A0|half_adder:ha2
+A => sum.IN0
+A => cout.IN0
+B => sum.IN1
+B => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|adder_8_bits:port_map_adder|full_adder:A1
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+cin => half_adder:ha2.B
+sum <= half_adder:ha2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|adder_8_bits:port_map_adder|full_adder:A1|half_adder:ha1
+A => sum.IN0
+A => cout.IN0
+B => sum.IN1
+B => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|adder_8_bits:port_map_adder|full_adder:A1|half_adder:ha2
+A => sum.IN0
+A => cout.IN0
+B => sum.IN1
+B => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|adder_8_bits:port_map_adder|full_adder:A2
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+cin => half_adder:ha2.B
+sum <= half_adder:ha2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|adder_8_bits:port_map_adder|full_adder:A2|half_adder:ha1
+A => sum.IN0
+A => cout.IN0
+B => sum.IN1
+B => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|adder_8_bits:port_map_adder|full_adder:A2|half_adder:ha2
+A => sum.IN0
+A => cout.IN0
+B => sum.IN1
+B => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|adder_8_bits:port_map_adder|full_adder:A3
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+cin => half_adder:ha2.B
+sum <= half_adder:ha2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|adder_8_bits:port_map_adder|full_adder:A3|half_adder:ha1
+A => sum.IN0
+A => cout.IN0
+B => sum.IN1
+B => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|adder_8_bits:port_map_adder|full_adder:A3|half_adder:ha2
+A => sum.IN0
+A => cout.IN0
+B => sum.IN1
+B => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|adder_8_bits:port_map_adder|full_adder:A4
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+cin => half_adder:ha2.B
+sum <= half_adder:ha2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|adder_8_bits:port_map_adder|full_adder:A4|half_adder:ha1
+A => sum.IN0
+A => cout.IN0
+B => sum.IN1
+B => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|adder_8_bits:port_map_adder|full_adder:A4|half_adder:ha2
+A => sum.IN0
+A => cout.IN0
+B => sum.IN1
+B => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|adder_8_bits:port_map_adder|full_adder:A5
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+cin => half_adder:ha2.B
+sum <= half_adder:ha2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|adder_8_bits:port_map_adder|full_adder:A5|half_adder:ha1
+A => sum.IN0
+A => cout.IN0
+B => sum.IN1
+B => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|adder_8_bits:port_map_adder|full_adder:A5|half_adder:ha2
+A => sum.IN0
+A => cout.IN0
+B => sum.IN1
+B => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|adder_8_bits:port_map_adder|full_adder:A6
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+cin => half_adder:ha2.B
+sum <= half_adder:ha2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|adder_8_bits:port_map_adder|full_adder:A6|half_adder:ha1
+A => sum.IN0
+A => cout.IN0
+B => sum.IN1
+B => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|adder_8_bits:port_map_adder|full_adder:A6|half_adder:ha2
+A => sum.IN0
+A => cout.IN0
+B => sum.IN1
+B => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|adder_8_bits:port_map_adder|full_adder:A7
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+cin => half_adder:ha2.B
+sum <= half_adder:ha2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|adder_8_bits:port_map_adder|full_adder:A7|half_adder:ha1
+A => sum.IN0
+A => cout.IN0
+B => sum.IN1
+B => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|adder_8_bits:port_map_adder|full_adder:A7|half_adder:ha2
+A => sum.IN0
+A => cout.IN0
+B => sum.IN1
+B => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub
+A[0] => adder_8_bits:A1.A[0]
+A[1] => adder_8_bits:A1.A[1]
+A[2] => adder_8_bits:A1.A[2]
+A[3] => adder_8_bits:A1.A[3]
+A[4] => adder_8_bits:A1.A[4]
+A[5] => adder_8_bits:A1.A[5]
+A[6] => adder_8_bits:A1.A[6]
+A[7] => adder_8_bits:A1.A[7]
+B[0] => adder_8_bits:A1.B[0]
+B[1] => adder_8_bits:A1.B[1]
+B[2] => adder_8_bits:A1.B[2]
+B[3] => adder_8_bits:A1.B[3]
+B[4] => adder_8_bits:A1.B[4]
+B[5] => adder_8_bits:A1.B[5]
+B[6] => adder_8_bits:A1.B[6]
+B[7] => adder_8_bits:A1.B[7]
+result[0] <= adder_8_bits:A1.result[0]
+result[1] <= adder_8_bits:A1.result[1]
+result[2] <= adder_8_bits:A1.result[2]
+result[3] <= adder_8_bits:A1.result[3]
+result[4] <= adder_8_bits:A1.result[4]
+result[5] <= adder_8_bits:A1.result[5]
+result[6] <= adder_8_bits:A1.result[6]
+result[7] <= adder_8_bits:A1.result[7]
+cout <= adder_8_bits:A1.cout
+
+
+|processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1
+A[0] => full_adder:A0.A
+A[1] => full_adder:A1.A
+A[2] => full_adder:A2.A
+A[3] => full_adder:A3.A
+A[4] => full_adder:A4.A
+A[5] => full_adder:A5.A
+A[6] => full_adder:A6.A
+A[7] => full_adder:A7.A
+B[0] => full_adder:A0.B
+B[1] => full_adder:A1.B
+B[2] => full_adder:A2.B
+B[3] => full_adder:A3.B
+B[4] => full_adder:A4.B
+B[5] => full_adder:A5.B
+B[6] => full_adder:A6.B
+B[7] => full_adder:A7.B
+sinal => full_adder:A0.cin
+result[0] <= full_adder:A0.sum
+result[1] <= full_adder:A1.sum
+result[2] <= full_adder:A2.sum
+result[3] <= full_adder:A3.sum
+result[4] <= full_adder:A4.sum
+result[5] <= full_adder:A5.sum
+result[6] <= full_adder:A6.sum
+result[7] <= full_adder:A7.sum
+cout <= full_adder:A7.cout
+
+
+|processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A0
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+cin => half_adder:ha2.B
+sum <= half_adder:ha2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A0|half_adder:ha1
+A => sum.IN0
+A => cout.IN0
+B => sum.IN1
+B => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A0|half_adder:ha2
+A => sum.IN0
+A => cout.IN0
+B => sum.IN1
+B => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A1
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+cin => half_adder:ha2.B
+sum <= half_adder:ha2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A1|half_adder:ha1
+A => sum.IN0
+A => cout.IN0
+B => sum.IN1
+B => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A1|half_adder:ha2
+A => sum.IN0
+A => cout.IN0
+B => sum.IN1
+B => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A2
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+cin => half_adder:ha2.B
+sum <= half_adder:ha2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A2|half_adder:ha1
+A => sum.IN0
+A => cout.IN0
+B => sum.IN1
+B => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A2|half_adder:ha2
+A => sum.IN0
+A => cout.IN0
+B => sum.IN1
+B => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A3
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+cin => half_adder:ha2.B
+sum <= half_adder:ha2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A3|half_adder:ha1
+A => sum.IN0
+A => cout.IN0
+B => sum.IN1
+B => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A3|half_adder:ha2
+A => sum.IN0
+A => cout.IN0
+B => sum.IN1
+B => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A4
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+cin => half_adder:ha2.B
+sum <= half_adder:ha2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A4|half_adder:ha1
+A => sum.IN0
+A => cout.IN0
+B => sum.IN1
+B => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A4|half_adder:ha2
+A => sum.IN0
+A => cout.IN0
+B => sum.IN1
+B => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A5
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+cin => half_adder:ha2.B
+sum <= half_adder:ha2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A5|half_adder:ha1
+A => sum.IN0
+A => cout.IN0
+B => sum.IN1
+B => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A5|half_adder:ha2
+A => sum.IN0
+A => cout.IN0
+B => sum.IN1
+B => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A6
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+cin => half_adder:ha2.B
+sum <= half_adder:ha2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A6|half_adder:ha1
+A => sum.IN0
+A => cout.IN0
+B => sum.IN1
+B => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A6|half_adder:ha2
+A => sum.IN0
+A => cout.IN0
+B => sum.IN1
+B => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A7
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+cin => half_adder:ha2.B
+sum <= half_adder:ha2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A7|half_adder:ha1
+A => sum.IN0
+A => cout.IN0
+B => sum.IN1
+B => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A7|half_adder:ha2
+A => sum.IN0
+A => cout.IN0
+B => sum.IN1
+B => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|mem_ram:port_map_mem_ram
+clock => ram~11.CLK
+clock => ram~0.CLK
+clock => ram~1.CLK
+clock => ram~2.CLK
+clock => ram~3.CLK
+clock => ram~4.CLK
+clock => ram~5.CLK
+clock => ram~6.CLK
+clock => ram~7.CLK
+clock => ram~8.CLK
+clock => ram~9.CLK
+clock => ram~10.CLK
+clock => out_port[0]~reg0.CLK
+clock => out_port[1]~reg0.CLK
+clock => out_port[2]~reg0.CLK
+clock => out_port[3]~reg0.CLK
+clock => out_port[4]~reg0.CLK
+clock => out_port[5]~reg0.CLK
+clock => out_port[6]~reg0.CLK
+clock => out_port[7]~reg0.CLK
+clock => ram.CLK0
+mem_write => ram~11.DATAIN
+mem_write => ram.WE
+mem_read => out_port[1]~reg0.ENA
+mem_read => out_port[0]~reg0.ENA
+mem_read => out_port[2]~reg0.ENA
+mem_read => out_port[3]~reg0.ENA
+mem_read => out_port[4]~reg0.ENA
+mem_read => out_port[5]~reg0.ENA
+mem_read => out_port[6]~reg0.ENA
+mem_read => out_port[7]~reg0.ENA
+endereco[0] => ram~2.DATAIN
+endereco[0] => ram.WADDR
+endereco[0] => ram.RADDR
+endereco[1] => ram~1.DATAIN
+endereco[1] => ram.WADDR1
+endereco[1] => ram.RADDR1
+endereco[2] => ram~0.DATAIN
+endereco[2] => ram.WADDR2
+endereco[2] => ram.RADDR2
+endereco[3] => ~NO_FANOUT~
+endereco[4] => ~NO_FANOUT~
+endereco[5] => ~NO_FANOUT~
+endereco[6] => ~NO_FANOUT~
+endereco[7] => ~NO_FANOUT~
+in_port[0] => ram~10.DATAIN
+in_port[0] => ram.DATAIN
+in_port[1] => ram~9.DATAIN
+in_port[1] => ram.DATAIN1
+in_port[2] => ram~8.DATAIN
+in_port[2] => ram.DATAIN2
+in_port[3] => ram~7.DATAIN
+in_port[3] => ram.DATAIN3
+in_port[4] => ram~6.DATAIN
+in_port[4] => ram.DATAIN4
+in_port[5] => ram~5.DATAIN
+in_port[5] => ram.DATAIN5
+in_port[6] => ram~4.DATAIN
+in_port[6] => ram.DATAIN6
+in_port[7] => ram~3.DATAIN
+in_port[7] => ram.DATAIN7
+out_port[0] <= out_port[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out_port[1] <= out_port[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out_port[2] <= out_port[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out_port[3] <= out_port[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out_port[4] <= out_port[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out_port[5] <= out_port[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out_port[6] <= out_port[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out_port[7] <= out_port[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|mult_2x1:port_map_mult_2X1_ram_ula
+in_port => out_port.OUTPUTSELECT
+in_port => out_port.OUTPUTSELECT
+in_port => out_port.OUTPUTSELECT
+in_port => out_port.OUTPUTSELECT
+in_port => out_port.OUTPUTSELECT
+in_port => out_port.OUTPUTSELECT
+in_port => out_port.OUTPUTSELECT
+in_port => out_port.OUTPUTSELECT
+in_A[0] => out_port.DATAB
+in_A[1] => out_port.DATAB
+in_A[2] => out_port.DATAB
+in_A[3] => out_port.DATAB
+in_A[4] => out_port.DATAB
+in_A[5] => out_port.DATAB
+in_A[6] => out_port.DATAB
+in_A[7] => out_port.DATAB
+in_B[0] => out_port.DATAA
+in_B[1] => out_port.DATAA
+in_B[2] => out_port.DATAA
+in_B[3] => out_port.DATAA
+in_B[4] => out_port.DATAA
+in_B[5] => out_port.DATAA
+in_B[6] => out_port.DATAA
+in_B[7] => out_port.DATAA
+out_port[0] <= out_port.DB_MAX_OUTPUT_PORT_TYPE
+out_port[1] <= out_port.DB_MAX_OUTPUT_PORT_TYPE
+out_port[2] <= out_port.DB_MAX_OUTPUT_PORT_TYPE
+out_port[3] <= out_port.DB_MAX_OUTPUT_PORT_TYPE
+out_port[4] <= out_port.DB_MAX_OUTPUT_PORT_TYPE
+out_port[5] <= out_port.DB_MAX_OUTPUT_PORT_TYPE
+out_port[6] <= out_port.DB_MAX_OUTPUT_PORT_TYPE
+out_port[7] <= out_port.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|extensor_sinal4_8:port_map_extensor_sinal4_8
+in_port[0] => out_port[0].DATAIN
+in_port[1] => out_port[1].DATAIN
+in_port[2] => out_port[2].DATAIN
+in_port[3] => out_port[3].DATAIN
+out_port[0] <= in_port[0].DB_MAX_OUTPUT_PORT_TYPE
+out_port[1] <= in_port[1].DB_MAX_OUTPUT_PORT_TYPE
+out_port[2] <= in_port[2].DB_MAX_OUTPUT_PORT_TYPE
+out_port[3] <= in_port[3].DB_MAX_OUTPUT_PORT_TYPE
+out_port[4] <= <GND>
+out_port[5] <= <GND>
+out_port[6] <= <GND>
+out_port[7] <= <GND>
+
+
+|processador_GE_22|portAnd:port_map_portAnd
+in_port_A => out_port.IN0
+in_port_B => out_port.IN1
+out_port <= out_port.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|mult_2x1:port_map_mult_2X1_add_pc_jump
+in_port => out_port.OUTPUTSELECT
+in_port => out_port.OUTPUTSELECT
+in_port => out_port.OUTPUTSELECT
+in_port => out_port.OUTPUTSELECT
+in_port => out_port.OUTPUTSELECT
+in_port => out_port.OUTPUTSELECT
+in_port => out_port.OUTPUTSELECT
+in_port => out_port.OUTPUTSELECT
+in_A[0] => out_port.DATAB
+in_A[1] => out_port.DATAB
+in_A[2] => out_port.DATAB
+in_A[3] => out_port.DATAB
+in_A[4] => out_port.DATAB
+in_A[5] => out_port.DATAB
+in_A[6] => out_port.DATAB
+in_A[7] => out_port.DATAB
+in_B[0] => out_port.DATAA
+in_B[1] => out_port.DATAA
+in_B[2] => out_port.DATAA
+in_B[3] => out_port.DATAA
+in_B[4] => out_port.DATAA
+in_B[5] => out_port.DATAA
+in_B[6] => out_port.DATAA
+in_B[7] => out_port.DATAA
+out_port[0] <= out_port.DB_MAX_OUTPUT_PORT_TYPE
+out_port[1] <= out_port.DB_MAX_OUTPUT_PORT_TYPE
+out_port[2] <= out_port.DB_MAX_OUTPUT_PORT_TYPE
+out_port[3] <= out_port.DB_MAX_OUTPUT_PORT_TYPE
+out_port[4] <= out_port.DB_MAX_OUTPUT_PORT_TYPE
+out_port[5] <= out_port.DB_MAX_OUTPUT_PORT_TYPE
+out_port[6] <= out_port.DB_MAX_OUTPUT_PORT_TYPE
+out_port[7] <= out_port.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador_GE_22|mult_2x1:port_map_mult_2X1_jump
+in_port => out_port.OUTPUTSELECT
+in_port => out_port.OUTPUTSELECT
+in_port => out_port.OUTPUTSELECT
+in_port => out_port.OUTPUTSELECT
+in_port => out_port.OUTPUTSELECT
+in_port => out_port.OUTPUTSELECT
+in_port => out_port.OUTPUTSELECT
+in_port => out_port.OUTPUTSELECT
+in_A[0] => out_port.DATAB
+in_A[1] => out_port.DATAB
+in_A[2] => out_port.DATAB
+in_A[3] => out_port.DATAB
+in_A[4] => out_port.DATAB
+in_A[5] => out_port.DATAB
+in_A[6] => out_port.DATAB
+in_A[7] => out_port.DATAB
+in_B[0] => out_port.DATAA
+in_B[1] => out_port.DATAA
+in_B[2] => out_port.DATAA
+in_B[3] => out_port.DATAA
+in_B[4] => out_port.DATAA
+in_B[5] => out_port.DATAA
+in_B[6] => out_port.DATAA
+in_B[7] => out_port.DATAA
+out_port[0] <= out_port.DB_MAX_OUTPUT_PORT_TYPE
+out_port[1] <= out_port.DB_MAX_OUTPUT_PORT_TYPE
+out_port[2] <= out_port.DB_MAX_OUTPUT_PORT_TYPE
+out_port[3] <= out_port.DB_MAX_OUTPUT_PORT_TYPE
+out_port[4] <= out_port.DB_MAX_OUTPUT_PORT_TYPE
+out_port[5] <= out_port.DB_MAX_OUTPUT_PORT_TYPE
+out_port[6] <= out_port.DB_MAX_OUTPUT_PORT_TYPE
+out_port[7] <= out_port.DB_MAX_OUTPUT_PORT_TYPE
+
+

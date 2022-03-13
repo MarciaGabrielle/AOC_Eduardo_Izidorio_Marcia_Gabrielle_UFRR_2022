@@ -1,0 +1,570 @@
+Analysis & Synthesis report for processador_GE_22
+Sun Mar 13 16:00:52 2022
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Port Connectivity Checks: "ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1"
+ 13. Port Connectivity Checks: "ula:port_map_ula|sub_8_bits:port_map_sub"
+ 14. Port Connectivity Checks: "ula:port_map_ula|adder_8_bits:port_map_adder"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Mar 13 16:00:52 2022       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; processador_GE_22                           ;
+; Top-level Entity Name              ; processador_GE_22                           ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 480                                         ;
+;     Total combinational functions  ; 432                                         ;
+;     Dedicated logic registers      ; 80                                          ;
+; Total registers                    ; 80                                          ;
+; Total pins                         ; 78                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M08DAF484C8G     ;                    ;
+; Top-level entity name                                            ; processador_GE_22  ; processador_GE_22  ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                                  ;
++---------------------------------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                              ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                                                              ; Library ;
++---------------------------------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; processador_GE_22.vhd                                         ; yes             ; User VHDL File  ; C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/processador_GE_22.vhd                                         ;         ;
+; Componentes/pc/pc.vhd                                         ; yes             ; User VHDL File  ; C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/pc/pc.vhd                                         ;         ;
+; Componentes/somador_pc/somador_pc.vhd                         ; yes             ; User VHDL File  ; C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/somador_pc/somador_pc.vhd                         ;         ;
+; Componentes/mem_rom/mem_rom.vhd                               ; yes             ; User VHDL File  ; C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/mem_rom/mem_rom.vhd                               ;         ;
+; Componentes/divisao_da_instrucao/divisao_da_instrucao.vhd     ; yes             ; User VHDL File  ; C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/divisao_da_instrucao/divisao_da_instrucao.vhd     ;         ;
+; Componentes/unidade_controle/unidade_controle.vhd             ; yes             ; User VHDL File  ; C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/unidade_controle/unidade_controle.vhd             ;         ;
+; Componentes/banco_de_registradores/banco_de_registradores.vhd ; yes             ; User VHDL File  ; C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/banco_de_registradores/banco_de_registradores.vhd ;         ;
+; Componentes/extensor_sinal2_8/extensor_sinal2_8.vhd           ; yes             ; User VHDL File  ; C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/extensor_sinal2_8/extensor_sinal2_8.vhd           ;         ;
+; Componentes/mult_2x1/mult_2x1.vhd                             ; yes             ; User VHDL File  ; C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/mult_2x1/mult_2x1.vhd                             ;         ;
+; Componentes/mem_ram/mem_ram.vhd                               ; yes             ; User VHDL File  ; C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/mem_ram/mem_ram.vhd                               ;         ;
+; Componentes/extensor_sinal4_8/extensor_sinal4_8.vhd           ; yes             ; User VHDL File  ; C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/extensor_sinal4_8/extensor_sinal4_8.vhd           ;         ;
+; Componentes/portAnd/portAnd.vhd                               ; yes             ; User VHDL File  ; C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/portAnd/portAnd.vhd                               ;         ;
+; Componentes/ula/ula.vhd                                       ; yes             ; User VHDL File  ; C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/ula/ula.vhd                                       ;         ;
+; Componentes/adder/adder_8_bits.vhd                            ; yes             ; User VHDL File  ; C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/adder/adder_8_bits.vhd                            ;         ;
+; Componentes/adder/full_adder.vhd                              ; yes             ; User VHDL File  ; C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/adder/full_adder.vhd                              ;         ;
+; Componentes/adder/half_adder.vhd                              ; yes             ; User VHDL File  ; C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/adder/half_adder.vhd                              ;         ;
+; Componentes/adder/sub_8_bits.vhd                              ; yes             ; User VHDL File  ; C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/adder/sub_8_bits.vhd                              ;         ;
+; Componentes/temp_zero/temp_zero.vhd                           ; yes             ; User VHDL File  ; C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/temp_zero/temp_zero.vhd                           ;         ;
+; Componentes/multi/multi.vhd                                   ; yes             ; User VHDL File  ; C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/multi/multi.vhd                                   ;         ;
++---------------------------------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 480         ;
+;                                             ;             ;
+; Total combinational functions               ; 432         ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 248         ;
+;     -- 3 input functions                    ; 138         ;
+;     -- <=2 input functions                  ; 46          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 320         ;
+;     -- arithmetic mode                      ; 112         ;
+;                                             ;             ;
+; Total registers                             ; 80          ;
+;     -- Dedicated logic registers            ; 80          ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 78          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; clock~input ;
+; Maximum fan-out                             ; 80          ;
+; Total fan-out                               ; 1875        ;
+; Average fan-out                             ; 2.81        ;
++---------------------------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                 ;
++-------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------+------------------------+--------------+
+; Compilation Hierarchy Node                                  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                      ; Entity Name            ; Library Name ;
++-------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------+------------------------+--------------+
+; |processador_GE_22                                          ; 432 (0)             ; 80 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 78   ; 0            ; 0          ; |processador_GE_22                                                                                       ; processador_GE_22      ; work         ;
+;    |banco_de_registradores:port_map_banco_de_registradores| ; 37 (37)             ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador_GE_22|banco_de_registradores:port_map_banco_de_registradores                                ; banco_de_registradores ; work         ;
+;    |mem_ram:port_map_mem_ram|                               ; 22 (22)             ; 40 (40)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador_GE_22|mem_ram:port_map_mem_ram                                                              ; mem_ram                ; work         ;
+;    |mem_rom:port_map_mem_rom|                               ; 28 (28)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador_GE_22|mem_rom:port_map_mem_rom                                                              ; mem_rom                ; work         ;
+;    |mult_2x1:port_map_mult_2X1_br_ula|                      ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador_GE_22|mult_2x1:port_map_mult_2X1_br_ula                                                     ; mult_2x1               ; work         ;
+;    |mult_2x1:port_map_mult_2X1_jump|                        ; 9 (9)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador_GE_22|mult_2x1:port_map_mult_2X1_jump                                                       ; mult_2x1               ; work         ;
+;    |mult_2x1:port_map_mult_2X1_ram_ula|                     ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador_GE_22|mult_2x1:port_map_mult_2X1_ram_ula                                                    ; mult_2x1               ; work         ;
+;    |pc:port_map_pc|                                         ; 1 (1)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador_GE_22|pc:port_map_pc                                                                        ; pc                     ; work         ;
+;    |somador_pc:port_map_somador_pc|                         ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador_GE_22|somador_pc:port_map_somador_pc                                                        ; somador_pc             ; work         ;
+;    |ula:port_map_ula|                                       ; 304 (75)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador_GE_22|ula:port_map_ula                                                                      ; ula                    ; work         ;
+;       |adder_8_bits:port_map_adder|                         ; 8 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador_GE_22|ula:port_map_ula|adder_8_bits:port_map_adder                                          ; adder_8_bits           ; work         ;
+;          |full_adder:A0|                                    ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador_GE_22|ula:port_map_ula|adder_8_bits:port_map_adder|full_adder:A0                            ; full_adder             ; work         ;
+;             |half_adder:ha1|                                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador_GE_22|ula:port_map_ula|adder_8_bits:port_map_adder|full_adder:A0|half_adder:ha1             ; half_adder             ; work         ;
+;          |full_adder:A1|                                    ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador_GE_22|ula:port_map_ula|adder_8_bits:port_map_adder|full_adder:A1                            ; full_adder             ; work         ;
+;          |full_adder:A2|                                    ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador_GE_22|ula:port_map_ula|adder_8_bits:port_map_adder|full_adder:A2                            ; full_adder             ; work         ;
+;          |full_adder:A3|                                    ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador_GE_22|ula:port_map_ula|adder_8_bits:port_map_adder|full_adder:A3                            ; full_adder             ; work         ;
+;          |full_adder:A4|                                    ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador_GE_22|ula:port_map_ula|adder_8_bits:port_map_adder|full_adder:A4                            ; full_adder             ; work         ;
+;          |full_adder:A5|                                    ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador_GE_22|ula:port_map_ula|adder_8_bits:port_map_adder|full_adder:A5                            ; full_adder             ; work         ;
+;          |full_adder:A6|                                    ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador_GE_22|ula:port_map_ula|adder_8_bits:port_map_adder|full_adder:A6                            ; full_adder             ; work         ;
+;          |full_adder:A7|                                    ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador_GE_22|ula:port_map_ula|adder_8_bits:port_map_adder|full_adder:A7                            ; full_adder             ; work         ;
+;       |multi:port_map_multi|                                ; 212 (212)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador_GE_22|ula:port_map_ula|multi:port_map_multi                                                 ; multi                  ; work         ;
+;       |sub_8_bits:port_map_sub|                             ; 9 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub                                              ; sub_8_bits             ; work         ;
+;          |adder_8_bits:A1|                                  ; 9 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1                              ; adder_8_bits           ; work         ;
+;             |full_adder:A1|                                 ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A1                ; full_adder             ; work         ;
+;                |half_adder:ha1|                             ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A1|half_adder:ha1 ; half_adder             ; work         ;
+;             |full_adder:A2|                                 ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A2                ; full_adder             ; work         ;
+;                |half_adder:ha1|                             ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A2|half_adder:ha1 ; half_adder             ; work         ;
+;             |full_adder:A3|                                 ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A3                ; full_adder             ; work         ;
+;                |half_adder:ha1|                             ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A3|half_adder:ha1 ; half_adder             ; work         ;
+;             |full_adder:A4|                                 ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A4                ; full_adder             ; work         ;
+;                |half_adder:ha1|                             ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A4|half_adder:ha1 ; half_adder             ; work         ;
+;             |full_adder:A5|                                 ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador_GE_22|ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A5                ; full_adder             ; work         ;
+;    |unidade_controle:port_map_unidade_controle|             ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |processador_GE_22|unidade_controle:port_map_unidade_controle                                            ; unidade_controle       ; work         ;
++-------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------+------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                  ;
++----------------------------------------------------+------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal    ; Free of Timing Hazards ;
++----------------------------------------------------+------------------------+------------------------+
+; ula:port_map_ula|overflow                          ; ula:port_map_ula|Mux13 ; yes                    ;
+; ula:port_map_ula|zero                              ; ula:port_map_ula|Mux0  ; yes                    ;
+; ula:port_map_ula|in_temp_zero                      ; ula:port_map_ula|Mux2  ; yes                    ;
+; Number of user-specified and inferred latches = 3  ;                        ;                        ;
++----------------------------------------------------+------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-------------------------------------------------------------+
+; Registers Removed During Synthesis                          ;
++----------------------------------------+--------------------+
+; Register name                          ; Reason for Removal ;
++----------------------------------------+--------------------+
+; mem_ram:port_map_mem_ram|ram~44        ; Lost fanout        ;
+; mem_ram:port_map_mem_ram|ram~45        ; Lost fanout        ;
+; mem_ram:port_map_mem_ram|ram~46        ; Lost fanout        ;
+; mem_ram:port_map_mem_ram|ram~47        ; Lost fanout        ;
+; mem_ram:port_map_mem_ram|ram~48        ; Lost fanout        ;
+; mem_ram:port_map_mem_ram|ram~49        ; Lost fanout        ;
+; mem_ram:port_map_mem_ram|ram~50        ; Lost fanout        ;
+; mem_ram:port_map_mem_ram|ram~51        ; Lost fanout        ;
+; mem_ram:port_map_mem_ram|ram~52        ; Lost fanout        ;
+; mem_ram:port_map_mem_ram|ram~53        ; Lost fanout        ;
+; mem_ram:port_map_mem_ram|ram~54        ; Lost fanout        ;
+; mem_ram:port_map_mem_ram|ram~55        ; Lost fanout        ;
+; mem_ram:port_map_mem_ram|ram~56        ; Lost fanout        ;
+; mem_ram:port_map_mem_ram|ram~57        ; Lost fanout        ;
+; mem_ram:port_map_mem_ram|ram~58        ; Lost fanout        ;
+; mem_ram:port_map_mem_ram|ram~59        ; Lost fanout        ;
+; mem_ram:port_map_mem_ram|ram~60        ; Lost fanout        ;
+; mem_ram:port_map_mem_ram|ram~61        ; Lost fanout        ;
+; mem_ram:port_map_mem_ram|ram~62        ; Lost fanout        ;
+; mem_ram:port_map_mem_ram|ram~63        ; Lost fanout        ;
+; mem_ram:port_map_mem_ram|ram~64        ; Lost fanout        ;
+; mem_ram:port_map_mem_ram|ram~65        ; Lost fanout        ;
+; mem_ram:port_map_mem_ram|ram~66        ; Lost fanout        ;
+; mem_ram:port_map_mem_ram|ram~67        ; Lost fanout        ;
+; mem_ram:port_map_mem_ram|ram~68        ; Lost fanout        ;
+; mem_ram:port_map_mem_ram|ram~69        ; Lost fanout        ;
+; mem_ram:port_map_mem_ram|ram~70        ; Lost fanout        ;
+; mem_ram:port_map_mem_ram|ram~71        ; Lost fanout        ;
+; mem_ram:port_map_mem_ram|ram~72        ; Lost fanout        ;
+; mem_ram:port_map_mem_ram|ram~73        ; Lost fanout        ;
+; mem_ram:port_map_mem_ram|ram~74        ; Lost fanout        ;
+; mem_ram:port_map_mem_ram|ram~75        ; Lost fanout        ;
+; Total Number of Removed Registers = 32 ;                    ;
++----------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 80    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 72    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |processador_GE_22|pc:port_map_pc|out_port[4]                        ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |processador_GE_22|ula:port_map_ula|multi:port_map_multi|produto     ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |processador_GE_22|ula:port_map_ula|multi:port_map_multi|produto     ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |processador_GE_22|ula:port_map_ula|multi:port_map_multi|produto     ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |processador_GE_22|ula:port_map_ula|multi:port_map_multi|produto     ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |processador_GE_22|ula:port_map_ula|multi:port_map_multi|produto     ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |processador_GE_22|ula:port_map_ula|multi:port_map_multi|produto     ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |processador_GE_22|ula:port_map_ula|multi:port_map_multi|out_port[8] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ula:port_map_ula|sub_8_bits:port_map_sub|adder_8_bits:A1" ;
++-------+-------+----------+-----------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                   ;
++-------+-------+----------+-----------------------------------------------------------+
+; sinal ; Input ; Info     ; Stuck at VCC                                              ;
++-------+-------+----------+-----------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ula:port_map_ula|sub_8_bits:port_map_sub"                                           ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "ula:port_map_ula|adder_8_bits:port_map_adder" ;
++-------+-------+----------+-----------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                       ;
++-------+-------+----------+-----------------------------------------------+
+; sinal ; Input ; Info     ; Stuck at GND                                  ;
++-------+-------+----------+-----------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 78                          ;
+; cycloneiii_ff         ; 80                          ;
+;     ENA               ; 72                          ;
+;     plain             ; 8                           ;
+; cycloneiii_lcell_comb ; 433                         ;
+;     arith             ; 112                         ;
+;         2 data inputs ; 14                          ;
+;         3 data inputs ; 98                          ;
+;     normal            ; 321                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 30                          ;
+;         3 data inputs ; 40                          ;
+;         4 data inputs ; 248                         ;
+;                       ;                             ;
+; Max LUT depth         ; 31.10                       ;
+; Average LUT depth     ; 22.90                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:03     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Sun Mar 13 16:00:07 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off processador_GE_22 -c processador_GE_22
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file processador_ge_22.vhd
+    Info (12022): Found design unit 1: processador_GE_22-behavior File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/processador_GE_22.vhd Line: 27
+    Info (12023): Found entity 1: processador_GE_22 File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/processador_GE_22.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/pc/pc.vhd
+    Info (12022): Found design unit 1: pc-behavior File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/pc/pc.vhd Line: 12
+    Info (12023): Found entity 1: pc File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/pc/pc.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/somador_pc/somador_pc.vhd
+    Info (12022): Found design unit 1: somador_pc-behavior File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/somador_pc/somador_pc.vhd Line: 12
+    Info (12023): Found entity 1: somador_pc File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/somador_pc/somador_pc.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/mem_rom/mem_rom.vhd
+    Info (12022): Found design unit 1: mem_rom-behavior File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/mem_rom/mem_rom.vhd Line: 13
+    Info (12023): Found entity 1: mem_rom File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/mem_rom/mem_rom.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/divisao_da_instrucao/divisao_da_instrucao.vhd
+    Info (12022): Found design unit 1: divisao_da_instrucao-behavior File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/divisao_da_instrucao/divisao_da_instrucao.vhd Line: 14
+    Info (12023): Found entity 1: divisao_da_instrucao File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/divisao_da_instrucao/divisao_da_instrucao.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/unidade_controle/unidade_controle.vhd
+    Info (12022): Found design unit 1: unidade_controle-behavior File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/unidade_controle/unidade_controle.vhd Line: 19
+    Info (12023): Found entity 1: unidade_controle File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/unidade_controle/unidade_controle.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/banco_de_registradores/banco_de_registradores.vhd
+    Info (12022): Found design unit 1: banco_de_registradores-behavior File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/banco_de_registradores/banco_de_registradores.vhd Line: 16
+    Info (12023): Found entity 1: banco_de_registradores File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/banco_de_registradores/banco_de_registradores.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/extensor_sinal2_8/extensor_sinal2_8.vhd
+    Info (12022): Found design unit 1: extensor_sinal2_8-behavior File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/extensor_sinal2_8/extensor_sinal2_8.vhd Line: 11
+    Info (12023): Found entity 1: extensor_sinal2_8 File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/extensor_sinal2_8/extensor_sinal2_8.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/mult_2x1/mult_2x1.vhd
+    Info (12022): Found design unit 1: mult_2x1-behavior File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/mult_2x1/mult_2x1.vhd Line: 13
+    Info (12023): Found entity 1: mult_2x1 File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/mult_2x1/mult_2x1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/mem_ram/mem_ram.vhd
+    Info (12022): Found design unit 1: mem_ram-behavior File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/mem_ram/mem_ram.vhd Line: 15
+    Info (12023): Found entity 1: mem_ram File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/mem_ram/mem_ram.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/extensor_sinal4_8/extensor_sinal4_8.vhd
+    Info (12022): Found design unit 1: extensor_sinal4_8-behavior File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/extensor_sinal4_8/extensor_sinal4_8.vhd Line: 11
+    Info (12023): Found entity 1: extensor_sinal4_8 File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/extensor_sinal4_8/extensor_sinal4_8.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/portand/portand.vhd
+    Info (12022): Found design unit 1: portAnd-behavior File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/portAnd/portAnd.vhd Line: 12
+    Info (12023): Found entity 1: portAnd File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/portAnd/portAnd.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/ula/ula.vhd
+    Info (12022): Found design unit 1: ula-behavior File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/ula/ula.vhd Line: 16
+    Info (12023): Found entity 1: ula File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/ula/ula.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/adder/adder_8_bits.vhd
+    Info (12022): Found design unit 1: adder_8_bits-behavior File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/adder/adder_8_bits.vhd Line: 14
+    Info (12023): Found entity 1: adder_8_bits File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/adder/adder_8_bits.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/adder/full_adder.vhd
+    Info (12022): Found design unit 1: full_adder-behavior File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/adder/full_adder.vhd Line: 14
+    Info (12023): Found entity 1: full_adder File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/adder/full_adder.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/adder/half_adder.vhd
+    Info (12022): Found design unit 1: half_adder-behavior File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/adder/half_adder.vhd Line: 13
+    Info (12023): Found entity 1: half_adder File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/adder/half_adder.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/adder/sub_8_bits.vhd
+    Info (12022): Found design unit 1: sub_8_bits-behavior File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/adder/sub_8_bits.vhd Line: 13
+    Info (12023): Found entity 1: sub_8_bits File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/adder/sub_8_bits.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/temp_zero/temp_zero.vhd
+    Info (12022): Found design unit 1: temp_zero-behavior File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/temp_zero/temp_zero.vhd Line: 11
+    Info (12023): Found entity 1: temp_zero File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/temp_zero/temp_zero.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/multi/multi.vhd
+    Info (12022): Found design unit 1: multi-behavior File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/multi/multi.vhd Line: 13
+    Info (12023): Found entity 1: multi File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/multi/multi.vhd Line: 5
+Info (12127): Elaborating entity "processador_GE_22" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at processador_GE_22.vhd(21): used implicit default value for signal "out_out_memoria_ram" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/processador_GE_22.vhd Line: 21
+Info (12128): Elaborating entity "somador_pc" for hierarchy "somador_pc:port_map_somador_pc" File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/processador_GE_22.vhd Line: 203
+Warning (10492): VHDL Process Statement warning at somador_pc.vhd(17): signal "in_port" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/somador_pc/somador_pc.vhd Line: 17
+Info (12128): Elaborating entity "pc" for hierarchy "pc:port_map_pc" File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/processador_GE_22.vhd Line: 205
+Info (12128): Elaborating entity "mem_rom" for hierarchy "mem_rom:port_map_mem_rom" File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/processador_GE_22.vhd Line: 207
+Warning (10492): VHDL Process Statement warning at mem_rom.vhd(134): signal "in_port" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/mem_rom/mem_rom.vhd Line: 134
+Info (12128): Elaborating entity "divisao_da_instrucao" for hierarchy "divisao_da_instrucao:port_map_divisao_da_instrucao" File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/processador_GE_22.vhd Line: 209
+Info (12128): Elaborating entity "unidade_controle" for hierarchy "unidade_controle:port_map_unidade_controle" File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/processador_GE_22.vhd Line: 211
+Warning (10492): VHDL Process Statement warning at unidade_controle.vhd(23): signal "op_code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/unidade_controle/unidade_controle.vhd Line: 23
+Info (12128): Elaborating entity "banco_de_registradores" for hierarchy "banco_de_registradores:port_map_banco_de_registradores" File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/processador_GE_22.vhd Line: 213
+Warning (10492): VHDL Process Statement warning at banco_de_registradores.vhd(29): signal "registrador" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/banco_de_registradores/banco_de_registradores.vhd Line: 29
+Warning (10492): VHDL Process Statement warning at banco_de_registradores.vhd(29): signal "endereco_reg_A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/banco_de_registradores/banco_de_registradores.vhd Line: 29
+Warning (10492): VHDL Process Statement warning at banco_de_registradores.vhd(30): signal "registrador" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/banco_de_registradores/banco_de_registradores.vhd Line: 30
+Warning (10492): VHDL Process Statement warning at banco_de_registradores.vhd(30): signal "endereco_reg_B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/banco_de_registradores/banco_de_registradores.vhd Line: 30
+Info (12128): Elaborating entity "extensor_sinal2_8" for hierarchy "extensor_sinal2_8:port_map_extensor_sinal2_8" File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/processador_GE_22.vhd Line: 215
+Info (12128): Elaborating entity "mult_2x1" for hierarchy "mult_2x1:port_map_mult_2X1_br_ula" File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/processador_GE_22.vhd Line: 217
+Info (12128): Elaborating entity "ula" for hierarchy "ula:port_map_ula" File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/processador_GE_22.vhd Line: 219
+Warning (10036): Verilog HDL or VHDL warning at ula.vhd(63): object "temp_overflow_sub" assigned a value but never read File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/ula/ula.vhd Line: 63
+Warning (10492): VHDL Process Statement warning at ula.vhd(72): signal "ula_op" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/ula/ula.vhd Line: 72
+Warning (10492): VHDL Process Statement warning at ula.vhd(74): signal "result_adder" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/ula/ula.vhd Line: 74
+Warning (10492): VHDL Process Statement warning at ula.vhd(75): signal "temp_overflow_adder" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/ula/ula.vhd Line: 75
+Warning (10492): VHDL Process Statement warning at ula.vhd(78): signal "result_adder" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/ula/ula.vhd Line: 78
+Warning (10492): VHDL Process Statement warning at ula.vhd(79): signal "temp_overflow_adder" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/ula/ula.vhd Line: 79
+Warning (10492): VHDL Process Statement warning at ula.vhd(82): signal "result_sub" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/ula/ula.vhd Line: 82
+Warning (10492): VHDL Process Statement warning at ula.vhd(85): signal "result_sub" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/ula/ula.vhd Line: 85
+Warning (10492): VHDL Process Statement warning at ula.vhd(88): signal "in_port_A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/ula/ula.vhd Line: 88
+Warning (10492): VHDL Process Statement warning at ula.vhd(91): signal "in_port_A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/ula/ula.vhd Line: 91
+Warning (10492): VHDL Process Statement warning at ula.vhd(94): signal "in_port_B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/ula/ula.vhd Line: 94
+Warning (10492): VHDL Process Statement warning at ula.vhd(97): signal "in_port_B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/ula/ula.vhd Line: 97
+Warning (10492): VHDL Process Statement warning at ula.vhd(100): signal "out_temp_zero" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/ula/ula.vhd Line: 100
+Warning (10492): VHDL Process Statement warning at ula.vhd(108): signal "out_temp_zero" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/ula/ula.vhd Line: 108
+Warning (10492): VHDL Process Statement warning at ula.vhd(116): signal "in_port_A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/ula/ula.vhd Line: 116
+Warning (10492): VHDL Process Statement warning at ula.vhd(116): signal "in_port_B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/ula/ula.vhd Line: 116
+Warning (10492): VHDL Process Statement warning at ula.vhd(124): signal "out_multi" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/ula/ula.vhd Line: 124
+Warning (10492): VHDL Process Statement warning at ula.vhd(125): signal "out_multi" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/ula/ula.vhd Line: 125
+Warning (10631): VHDL Process Statement warning at ula.vhd(70): inferring latch(es) for signal or variable "overflow", which holds its previous value in one or more paths through the process File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/ula/ula.vhd Line: 70
+Warning (10631): VHDL Process Statement warning at ula.vhd(70): inferring latch(es) for signal or variable "zero", which holds its previous value in one or more paths through the process File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/ula/ula.vhd Line: 70
+Warning (10631): VHDL Process Statement warning at ula.vhd(70): inferring latch(es) for signal or variable "in_temp_zero", which holds its previous value in one or more paths through the process File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/ula/ula.vhd Line: 70
+Info (10041): Inferred latch for "in_temp_zero" at ula.vhd(70) File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/ula/ula.vhd Line: 70
+Info (10041): Inferred latch for "zero" at ula.vhd(70) File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/ula/ula.vhd Line: 70
+Info (10041): Inferred latch for "overflow" at ula.vhd(70) File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/ula/ula.vhd Line: 70
+Info (12128): Elaborating entity "temp_zero" for hierarchy "ula:port_map_ula|temp_zero:port_map_temp_zero" File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/ula/ula.vhd Line: 66
+Info (12128): Elaborating entity "multi" for hierarchy "ula:port_map_ula|multi:port_map_multi" File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/ula/ula.vhd Line: 67
+Info (12128): Elaborating entity "adder_8_bits" for hierarchy "ula:port_map_ula|adder_8_bits:port_map_adder" File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/ula/ula.vhd Line: 68
+Info (12128): Elaborating entity "full_adder" for hierarchy "ula:port_map_ula|adder_8_bits:port_map_adder|full_adder:A0" File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/adder/adder_8_bits.vhd Line: 29
+Info (12128): Elaborating entity "half_adder" for hierarchy "ula:port_map_ula|adder_8_bits:port_map_adder|full_adder:A0|half_adder:ha1" File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/adder/full_adder.vhd Line: 28
+Info (12128): Elaborating entity "sub_8_bits" for hierarchy "ula:port_map_ula|sub_8_bits:port_map_sub" File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/ula/ula.vhd Line: 69
+Info (12128): Elaborating entity "mem_ram" for hierarchy "mem_ram:port_map_mem_ram" File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/processador_GE_22.vhd Line: 221
+Info (12128): Elaborating entity "extensor_sinal4_8" for hierarchy "extensor_sinal4_8:port_map_extensor_sinal4_8" File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/processador_GE_22.vhd Line: 225
+Info (12128): Elaborating entity "portAnd" for hierarchy "portAnd:port_map_portAnd" File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/processador_GE_22.vhd Line: 227
+Info (276014): Found 2 instances of uninferred RAM logic
+    Info (276004): RAM logic "banco_de_registradores:port_map_banco_de_registradores|registrador" is uninferred due to inappropriate RAM size File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/banco_de_registradores/banco_de_registradores.vhd Line: 19
+    Info (276004): RAM logic "mem_ram:port_map_mem_ram|ram" is uninferred due to inappropriate RAM size File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/mem_ram/mem_ram.vhd Line: 17
+Warning (13012): Latch ula:port_map_ula|overflow has unsafe behavior File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/ula/ula.vhd Line: 12
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc:port_map_pc|out_port[7] File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/pc/pc.vhd Line: 17
+Warning (13012): Latch ula:port_map_ula|zero has unsafe behavior File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/ula/ula.vhd Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc:port_map_pc|out_port[7] File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/pc/pc.vhd Line: 17
+Warning (13012): Latch ula:port_map_ula|in_temp_zero has unsafe behavior File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/ula/ula.vhd Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc:port_map_pc|out_port[7] File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/Componentes/pc/pc.vhd Line: 17
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "out_out_memoria_ram[0]" is stuck at GND File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/processador_GE_22.vhd Line: 21
+    Warning (13410): Pin "out_out_memoria_ram[1]" is stuck at GND File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/processador_GE_22.vhd Line: 21
+    Warning (13410): Pin "out_out_memoria_ram[2]" is stuck at GND File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/processador_GE_22.vhd Line: 21
+    Warning (13410): Pin "out_out_memoria_ram[3]" is stuck at GND File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/processador_GE_22.vhd Line: 21
+    Warning (13410): Pin "out_out_memoria_ram[4]" is stuck at GND File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/processador_GE_22.vhd Line: 21
+    Warning (13410): Pin "out_out_memoria_ram[5]" is stuck at GND File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/processador_GE_22.vhd Line: 21
+    Warning (13410): Pin "out_out_memoria_ram[6]" is stuck at GND File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/processador_GE_22.vhd Line: 21
+    Warning (13410): Pin "out_out_memoria_ram[7]" is stuck at GND File: C:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Processador_GE_22/processador_GE_22.vhd Line: 21
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 32 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 574 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 77 output pins
+    Info (21061): Implemented 496 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 45 warnings
+    Info: Peak virtual memory: 4800 megabytes
+    Info: Processing ended: Sun Mar 13 16:00:52 2022
+    Info: Elapsed time: 00:00:45
+    Info: Total CPU time (on all processors): 00:00:51
+
+
