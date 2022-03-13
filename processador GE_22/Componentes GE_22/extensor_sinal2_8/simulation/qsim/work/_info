@@ -1,0 +1,96 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/gabyb/Projeto_AOC/MarciaGabrielleAOC_Eduardo_Izidorio_Marcia_Gabrielle_UFRR_2022/Componentes/extensor_sinal2_8/simulation/qsim
+Eextensor_sinal2_8
+Z1 w1646744562
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 7d5Xo;QBOkc31OfQTzSXV0
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z7 DPx11 fiftyfivenm 22 fiftyfivenm_components 0 22 IfY7Mh2WPBc;@7U@3<I^[0
+R0
+Z8 8extensor_sinal2_8.vho
+Z9 Fextensor_sinal2_8.vho
+l0
+L34
+V@n;Z<a4jfD@neVQ8`4:?Q1
+!s100 Ua:R8^BEC;NaKRDFAiPY71
+Z10 OV;C;10.5b;63
+32
+Z11 !s110 1646744564
+!i10b 1
+Z12 !s108 1646744564.000000
+Z13 !s90 -work|work|extensor_sinal2_8.vho|
+Z14 !s107 extensor_sinal2_8.vho|
+!i113 1
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 17 extensor_sinal2_8 0 22 @n;Z<a4jfD@neVQ8`4:?Q1
+l64
+L41
+VZ:9GgiOiB>1_lMJ5hEi<X3
+!s100 :4LNB8a<_UN?Vz8E>W05@2
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Eextensor_sinal2_8_vhd_vec_tst
+Z17 w1646744561
+R5
+R6
+R0
+Z18 8Waveform.vwf.vht
+Z19 FWaveform.vwf.vht
+l0
+L31
+VZ:_TF7i7<mGOFBaH`DBaB0
+!s100 F`D5BUMn_E4jT`aB8_Oh]1
+R10
+32
+R11
+!i10b 1
+R12
+Z20 !s90 -work|work|Waveform.vwf.vht|
+Z21 !s107 Waveform.vwf.vht|
+!i113 1
+R15
+R16
+Aextensor_sinal2_8_arch
+R5
+R6
+DEx4 work 29 extensor_sinal2_8_vhd_vec_tst 0 22 Z:_TF7i7<mGOFBaH`DBaB0
+l44
+L33
+V^OPAON;<7oR7`SnT?mRiM2
+!s100 1KTUoGmEFFCgCocjgLdhO0
+R10
+32
+R11
+!i10b 1
+R12
+R20
+R21
+!i113 1
+R15
+R16
