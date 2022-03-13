@@ -1,0 +1,5 @@
+|temp_zero
+in_port => out_port.DATAIN
+out_port <= in_port.DB_MAX_OUTPUT_PORT_TYPE
+
+
