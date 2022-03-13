@@ -1,0 +1,129 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "reg_out_A[0]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_out_A[1]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_out_A[2]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_out_A[3]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_out_A[4]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_out_A[5]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_out_A[6]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_out_A[7]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_out_B[0]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_out_B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_out_B[2]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_out_B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_out_B[4]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_out_B[5]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_out_B[6]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_out_B[7]",
+					"strict" : false
+				},
+				{
+					"name" : "endereco_reg_A[1]",
+					"strict" : false
+				},
+				{
+					"name" : "endereco_reg_A[0]",
+					"strict" : false
+				},
+				{
+					"name" : "endereco_reg_B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "endereco_reg_B[0]",
+					"strict" : false
+				},
+				{
+					"name" : "write_data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "reg_write",
+					"strict" : false
+				},
+				{
+					"name" : "write_data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "write_data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "write_data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "write_data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "write_data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "write_data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "write_data[7]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
